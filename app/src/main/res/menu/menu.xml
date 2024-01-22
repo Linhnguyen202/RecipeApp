@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Home"
+        android:icon="@drawable/ic_home"
+        android:id="@+id/homeSrcreen"
+        />
+    <item
+        android:title="Search"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:id="@+id/searchScreen" />
+
+    <item android:id="@+id/favorScreen"
+        android:title="Favourites"
+        android:icon="@drawable/baseline_favorite_24"/>
+
+    <item android:id="@+id/profileScreen"
+        android:title="Profile"
+        android:icon="@drawable/profile"/>
+</menu>

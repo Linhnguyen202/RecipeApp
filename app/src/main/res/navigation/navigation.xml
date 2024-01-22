@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeSrcreen">
+    <fragment
+        android:id="@+id/homeSrcreen"
+        android:name="com.example.recipeapp.layout.HomeSrcreen"
+        android:label="fragment_home_srcreen"
+        tools:layout="@layout/fragment_home_srcreen" >
+        <action
+            android:id="@+id/action_homeSrcreen_to_detailScreen"
+            app:destination="@id/detailScreen" />
+        <action
+            android:id="@+id/action_homeSrcreen_to_mealCategoryScreen"
+            app:destination="@id/mealCategoryScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchScreen"
+        android:name="com.example.recipeapp.layout.SearchScreen"
+        android:label="fragment_search_screen"
+        tools:layout="@layout/fragment_search_screen" >
+        <action
+            android:id="@+id/action_searchScreen_to_detailScreen"
+            app:destination="@id/detailScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/favorScreen"
+        android:name="com.example.recipeapp.layout.FavorScreen"
+        android:label="fragment_favor_screen"
+        tools:layout="@layout/fragment_favor_screen" />
+    <fragment
+        android:id="@+id/profileScreen"
+        android:name="com.example.recipeapp.layout.ProfileScreen"
+        android:label="fragment_profile_screen"
+        tools:layout="@layout/fragment_profile_screen" >
+        <action
+            android:id="@+id/action_profileScreen_to_splashScreen"
+            app:destination="@id/splashScreen" />
+        <action
+            android:id="@+id/action_profileScreen_to_updateProfileScreen"
+            app:destination="@id/updateProfileScreen" />
+    </fragment>
+    <activity
+        android:id="@+id/detailScreen"
+        android:name="com.example.recipeapp.activity.DetailScreen"
+        android:label="activity_detail_screen"
+        tools:layout="@layout/activity_detail_screen" >
+        <argument
+            android:name="Id"
+            app:argType="string" />
+    </activity>
+    <fragment
+        android:id="@+id/mealCategoryScreen"
+        android:name="com.example.recipeapp.layout.MealCategoryScreen"
+        android:label="fragment_meal_category_screen"
+        tools:layout="@layout/fragment_meal_category_screen" >
+        <argument
+            android:name="Category"
+            app:argType="com.example.recipeapp.model.Category" />
+    </fragment>
+    <activity
+        android:id="@+id/splashScreen"
+        android:name="com.example.recipeapp.activity.SplashScreen"
+        android:label="activity_splash_screen"
+        tools:layout="@layout/activity_splash_screen" />
+    <fragment
+        android:id="@+id/updateProfileScreen"
+        android:name="com.example.recipeapp.layout.UpdateProfileScreen"
+        android:label="fragment_update_profile_screen"
+        tools:layout="@layout/fragment_update_profile_screen" />
+</navigation>
